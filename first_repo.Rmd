@@ -9,6 +9,8 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+library(tidyverse)
 ```
 
 This report documents my first attempts of using GitHub to version control an RStudio project. I will be modifying this report, staging and commiting
@@ -21,7 +23,14 @@ plot(cars, col = "red", xlab = "speed (mph)", ylab = "distance (miles)")
 ```
 A summary of the data frame is given below  
 ```{r, cars-summary}
-library(knitr)
 kable(summary(cars))
 ```
+
+```{r, ggplot}
+cars %>% 
+  ggplot(aes(speed, dist)) +
+   geom_point(color ="steelblue", pch = 16, size = 2) +
+   theme_bw()
+```
+
 
