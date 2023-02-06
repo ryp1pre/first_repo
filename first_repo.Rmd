@@ -29,14 +29,8 @@ kable(summary(cars))
 ```{r, ggplot}
 cars %>% 
   ggplot(aes(speed, dist)) +
-   geom_point(aes(color = speed > 20), pch = 16, size = 2) +
+   geom_point(color ="steelblue", pch = 16, size = 2) +
    theme_bw()
 ```
-Plot from *msleep* dataset
-```{r}
-msleep %>% 
-  ggplot(aes(brainwt, sleep_total, color = conservation)) +
-   geom_point() +
-  facet_wrap(~vore)
-```
+
 
