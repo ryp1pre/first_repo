@@ -37,7 +37,6 @@ Plot from *msleep* dataset
 msleep %>% 
   ggplot(aes(brainwt, sleep_total, color = conservation)) +
    geom_point() +
-  facet_wrap(~vore) +
-  coord_flip()
+  facet_wrap(~vore)
 ```
 
