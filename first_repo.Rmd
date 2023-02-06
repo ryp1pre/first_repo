@@ -32,5 +32,11 @@ cars %>%
    geom_point(aes(color = speed > 20), pch = 16, size = 2) +
    theme_bw()
 ```
-
+Plot from *msleep* dataset
+```{r}
+msleep %>% 
+  ggplot(aes(brainwt, sleep_total, color = conservation)) +
+   geom_point() +
+  facet_wrap(~vore)
+```
 
